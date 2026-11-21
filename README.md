@@ -1,4 +1,4 @@
-# Ruhe-Browser
+# Mute-Browser
 
 Minimaler iPhone-Browser ohne Ton. Alle Webseiten sind erreichbar, Audio ist gesperrt.
 
