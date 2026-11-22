@@ -10,6 +10,7 @@ Minimaler iPhone-Browser ohne Ton. Alle Webseiten sind erreichbar, Audio ist ges
 - **Lesezeichen** (höchstens 5): Im Menü unten rechts "Lesezeichen setzen". Sie erscheinen auf der Startseite eines neuen Tabs, zum Löschen lange drücken.
 - Keine Sprünge in andere Apps, Mikrofon und Kamera werden immer abgelehnt
 - Kein Ton über mehrere Schichten (siehe `Sources/AudioBlocker.swift`)
+- Werbeblocker für die großen Anzeigennetzwerke (siehe `Sources/AdBlocker.swift`). Er fängt nicht jede Werbung, vor allem nicht die, die eine Seite selbst ausliefert.
 
 ## Einstellungen
 
@@ -17,6 +18,7 @@ In `Sources/Config.swift`:
 
 - `blockAllMedia = true`: Audio und Video werden gar nicht erst geladen (stärkste Sperre).
 - `blockAllMedia = false`: Videos dürfen stumm laufen.
+- `blockAds`: Werbeblocker an oder aus.
 - `searchURL`: Suchmaschine.
 - `maxTabs` und `maxBookmarks`: Obergrenzen.
 - `allowedDownloadExtensions`: erlaubte Dateitypen für Downloads.

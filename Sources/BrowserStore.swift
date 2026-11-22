@@ -18,7 +18,10 @@ final class BrowserStore: ObservableObject {
 
     init() {
         AudioBlocker.install(in: controller) { [weak self] in
-            self?.newTab()
+            guard let self = self else { return }
+            AdBlocker.install(in: self.controller) { [weak self] in
+                self?.newTab()
+            }
         }
     }
 

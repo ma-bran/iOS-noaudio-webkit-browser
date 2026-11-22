@@ -3,7 +3,10 @@ import Foundation
 enum Config {
     /// true:  Audio und Video werden gar nicht erst geladen (stärkste Sperre, auch keine stummen Videos).
     /// false: Videos dürfen laufen, aber komplett stumm (Ton wird per Skript erzwungen ausgeschaltet).
-    static let blockAllMedia = true
+    static let blockAllMedia = false
+
+    /// Werbeblocker für die großen Anzeigennetzwerke (siehe AdBlocker.swift)
+    static let blockAds = true
 
     /// Suchmaschine für Eingaben, die keine Adresse sind
     static let searchURL = "https://duckduckgo.com/?q="
