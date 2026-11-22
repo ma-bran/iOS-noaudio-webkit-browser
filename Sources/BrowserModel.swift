@@ -16,6 +16,9 @@ final class TabModel: NSObject, ObservableObject, Identifiable {
     @Published var hasPage = false
     @Published var showsStartPage = true
 
+    /// Zuletzt angeforderte Adresse, falls webView.url noch leer ist (Seite lädt noch)
+    private(set) var requestedURL: URL?
+
     private var observers: [NSKeyValueObservation] = []
 
     init(store: BrowserStore, initialURL: URL? = nil) {
@@ -71,6 +74,7 @@ final class TabModel: NSObject, ObservableObject, Identifiable {
 
     func load(_ url: URL) {
         showsStartPage = false
+        requestedURL = url
         webView.load(URLRequest(url: url))
     }
 

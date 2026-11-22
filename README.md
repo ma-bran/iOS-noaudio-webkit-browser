@@ -5,7 +5,7 @@ Minimaler iPhone-Browser ohne Ton. Alle Webseiten sind erreichbar, Audio ist ges
 ## Was die App kann
 
 - Adressleiste mit Suche (DuckDuckGo), Zurück, Vor, Neu laden, Startseite
-- **Tabs** (höchstens 5, einstellbar in `Sources/Config.swift`). Links mit target=_blank öffnen einen neuen Tab.
+- **Tabs** (höchstens 5, einstellbar in `Sources/Config.swift`). Links mit target=_blank öffnen einen neuen Tab. Die offenen Tabs bleiben nach dem Schließen der App erhalten und werden beim Start wieder geladen.
 - **Downloads**: Dateien landen im App-Ordner (Menü unten rechts, "Downloads"). Dort kannst du sie ansehen, teilen und löschen. Erlaubt sind nur Dokumente und Bilder (Liste in `Config.swift`). Archive wie ZIP sowie Audio und Video werden abgelehnt, sonst ließe sich die Ton-Sperre umgehen.
 - **Lesezeichen** (höchstens 5): Im Menü unten rechts "Lesezeichen setzen". Sie erscheinen auf der Startseite eines neuen Tabs, zum Löschen lange drücken.
 - Keine Sprünge in andere Apps, Mikrofon und Kamera werden immer abgelehnt

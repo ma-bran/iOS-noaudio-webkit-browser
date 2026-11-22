@@ -80,6 +80,7 @@ struct BrowserPage: View {
             if !addressFocused && !tab.showsStartPage {
                 input = newValue
             }
+            store.saveState()
         }
         .onChange(of: tab.showsStartPage) { isStart in
             if isStart {
@@ -87,6 +88,7 @@ struct BrowserPage: View {
             } else if !addressFocused {
                 input = tab.urlText
             }
+            store.saveState()
         }
         .sheet(isPresented: $showTabs) {
             TabSwitcherView()
