@@ -1,0 +1,32 @@
+name: NoAudioBrowser
+options:
+  deploymentTarget:
+    iOS: "16.0"
+settings:
+  base:
+    SWIFT_VERSION: "5.0"
+targets:
+  NoAudioBrowser:
+    type: application
+    platform: iOS
+    sources:
+      - path: Sources
+    info:
+      path: Support/Info.plist
+      properties:
+        CFBundleDisplayName: Ruhe-Browser
+        CFBundleShortVersionString: "1.1"
+        CFBundleVersion: "2"
+        UILaunchScreen: {}
+        UIFileSharingEnabled: true
+        LSSupportsOpeningDocumentsInPlace: true
+        UISupportedInterfaceOrientations:
+          - UIInterfaceOrientationPortrait
+          - UIInterfaceOrientationLandscapeLeft
+          - UIInterfaceOrientationLandscapeRight
+        UIApplicationSceneManifest:
+          UIApplicationSupportsMultipleScenes: false
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: local.ruhebrowser
+        TARGETED_DEVICE_FAMILY: "1"
